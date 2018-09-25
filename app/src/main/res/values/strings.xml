@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Counter</string>
+    <string name="title_main">Ollis Counter</string>
+    <string name="button_increase">Increase</string>
+    <string name="button_decrease">Decrease</string>
+    <string name="button_clear">Clear</string>
+    <integer name="counter_value">1</integer>
+
+</resources>
