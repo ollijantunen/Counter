@@ -4,6 +4,6 @@
     <string name="button_increase">Increase</string>
     <string name="button_decrease">Decrease</string>
     <string name="button_clear">Clear</string>
-    <integer name="counter_value">1</integer>
+    <string name="counter_view">0</string>
 
 </resources>
