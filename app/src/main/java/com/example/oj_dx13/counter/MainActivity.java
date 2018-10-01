@@ -8,12 +8,12 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private int counterValue = 0;
+    private final int maxCounterValue = 15;
+    private final int minCounterValue = -5;
     private TextView counterView;
     private Button button_increase;
     private Button button_decrease;
     private Button button_reset;
-
-    // Counter counter = new Counter();
 
     private View.OnClickListener clickListener = new View.OnClickListener() {
         @Override
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     };
-       @Override
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -44,9 +44,68 @@ public class MainActivity extends AppCompatActivity {
         button_reset = (Button) findViewById(R.id.button_reset);
         button_reset.setOnClickListener(clickListener);
 
-        counterView.setText(String.valueOf(counterValue));
+        // counterView.setText(String.valueOf(counterValue));
 
+    }
+
+    private void increase() {
+        if (counterValue < maxCounterValue) {
+            this.counterValue++;
         }
+        counterView.setText(String.valueOf(counterValue));
+    }
+    private void decrease() {
+        if (counterValue > minCounterValue) {
+            this.counterValue--;
+        }
+        counterView.setText(String.valueOf(counterValue));
+    }
+    private void reset() {
+        this.counterValue = 0;
+        counterView.setText(String.valueOf(counterValue));
+    }
+/*    private int counterValue = 0;
+    private final int maxCounterValue = 15;
+    private final int minCounterValue = -5;
+    private TextView counterView;
+    private Button button_increase;
+    private Button button_decrease;
+    private Button button_reset;
+
+   // Counter counter = new Counter();
+
+    private View.OnClickListener clickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            switch (v.getId()) {
+                case R.id.button_increase:
+                    increase(v);
+                    break;
+                case R.id.button_decrease:
+                    decrease(View v);
+                    break;
+                case R.id.button_reset:
+                    reset(View v);
+                    break;
+            }
+        }
+    };
+
+       @Override
+    protected void onCreate(Bundle savedInstanceState) {
+           super.onCreate(savedInstanceState);
+           setContentView(R.layout.activity_main);
+
+           counterView = findViewById(R.id.counterView);
+           button_increase = findViewById(R.id.button_increase);
+           button_increase.setOnClickListener(clickListener);
+           button_decrease = findViewById(R.id.button_decrease);
+           button_decrease.setOnClickListener(clickListener);
+           button_reset = findViewById(R.id.button_reset);
+           button_reset.setOnClickListener(clickListener);
+
+           counterView.setText(String.valueOf(counterValue));
+       }
 
     private void increase() {
         this.counterValue++;
@@ -60,4 +119,6 @@ public class MainActivity extends AppCompatActivity {
         this.counterValue = 0;
         counterView.setText(String.valueOf(counterValue));
     }
+ */
+
 }
