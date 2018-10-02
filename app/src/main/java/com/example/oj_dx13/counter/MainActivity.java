@@ -6,7 +6,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,7 +14,6 @@ public class MainActivity extends AppCompatActivity {
     private Button button_decrease;
     private Button button_reset;
     private ImageButton image_reset;
-    // private RadioGroup radioGroup;
     private RadioButton radioDec, radioHex;
 
     Counter counter = new Counter();
@@ -38,18 +36,7 @@ public class MainActivity extends AppCompatActivity {
                     // counterView.setText(String.valueOf(counter.getCounterValue()));
                     break;
             }
- /*           switch (v.getId()) {
-                case R.id.radioDec:
-                    counterView.setText(String.valueOf(counter.getCounterValue()));
-                    break;
-                case R.id.radioHex:
-                    counterView.setText(String.valueOf(Integer.toHexString(counter.getCounterValue())));
-                    break;
-            }
 
-            radioGroup = findViewById(R.id.radioGroup);
-            int radioButtonId = radioGroup.getCheckedRadioButtonId();
-            */
             if (radioDec.isChecked()) {
                 counterView.setText(String.valueOf(counter.getCounterValue()));
             } else if (radioHex.isChecked()) {
