@@ -5,5 +5,7 @@
     <string name="button_decrease">Decrease</string>
     <string name="button_clear">Clear</string>
     <string name="counter_view">0</string>
+    <string name="radio_dec">Dec</string>
+    <string name="radio_hex">Hex</string>
 
 </resources>

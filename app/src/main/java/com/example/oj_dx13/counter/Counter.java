@@ -5,10 +5,11 @@ public class Counter {
     private int counterValue;
     private final int maxCounterValue;
     private final int minCounterValue;
+    private int radioGroup;
 
     public Counter() {
         counterValue = 0;
-        maxCounterValue = 10;
+        maxCounterValue = 100;
         minCounterValue = -5;
 
     }
